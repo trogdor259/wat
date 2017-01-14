@@ -1,0 +1,6 @@
+## Interface: 70100
+## Title: Withered Army Training Treasure Tracker
+## Author: Acceptance-Trollbane
+## Version: 1.00
+## Notes: A lightweight progress tracker for withered army training chest completion.
+witheredarmytraining.lua
