@@ -28,21 +28,21 @@ SLASH_WAT3 = "/witheredarmytraining"
 
 function WAT:updateStats()
 	-- Do the stuff
-	local _, _, _, petrified_silkweave_done, _ = IsQuestFlaggedCompleted(43149,1);
-	local _, _, _, berserking_helm_of_ondryel_done, _ = IsQuestFlaggedCompleted(43071,1);
-	local _, _, _, travelers_banking_chest_done, _ = IsQuestFlaggedCompleted(43140,1);
-  local _, _, _, soothing_leystone_shard_done, _ = IsQuestFlaggedCompleted(43111,1);
-  local _, _, _, spellmask_of_azsylla_done, _ = IsQuestFlaggedCompleted(43146,1);
-  local _, _, _, ancient_mana_basin_done, _ = IsQuestFlaggedCompleted(43144,1);
-  local _, _, _, lenses_of_spellseer_dellian_done, _ = IsQuestFlaggedCompleted(43134,1);
-  local _, _, _, lens_of_qindera_done, _ = IsQuestFlaggedCompleted(43148,1);
-  local _, _, _, spellmask_of_azsylia_done, _ = IsQuestFlaggedCompleted(43128,1);
-  local _, _, _, disc_of_the_starcaller_done, _ = IsQuestFlaggedCompleted(43135,1);
-  local _, _, _, leyline_broodling_done, _ = IsQuestFlaggedCompleted(43141,1);
-  local _, _, _, berserking_helm_of_taenna_done, _ = IsQuestFlaggedCompleted(43145,1);
-  local _, _, _, box_of_calming_whispers_done, _ = IsQuestFlaggedCompleted(43120,1);
-  local _, _, _, treemenders_beacon_done, _ = IsQuestFlaggedCompleted(43143,1);
-  local _, _, _, manafused_faldorei_egg_sac_done, _ = IsQuestFlaggedCompleted(43142,1);
+	local petrified_silkweave_done = IsQuestFlaggedCompleted(43149);
+	local berserking_helm_of_ondryel_done = IsQuestFlaggedCompleted(43071);
+	local travelers_banking_chest_done = IsQuestFlaggedCompleted(43140);
+  local soothing_leystone_shard_done = IsQuestFlaggedCompleted(43111);
+  local spellmask_of_azsylla_done = IsQuestFlaggedCompleted(43146);
+  local ancient_mana_basin_done = IsQuestFlaggedCompleted(43144);
+  local lenses_of_spellseer_dellian_done = IsQuestFlaggedCompleted(43134);
+  local lens_of_qindera_done = IsQuestFlaggedCompleted(43148);
+  local spellmask_of_azsylia_done = IsQuestFlaggedCompleted(43128);
+  local disc_of_the_starcaller_done = IsQuestFlaggedCompleted(43135);
+  local leyline_broodling_done = IsQuestFlaggedCompleted(43141);
+  local berserking_helm_of_taenna_done = IsQuestFlaggedCompleted(43145);
+  local box_of_calming_whispers_done = IsQuestFlaggedCompleted(43120);
+  local treemenders_beacon_done = IsQuestFlaggedCompleted(43143);
+  local manafused_faldorei_egg_sac_done = IsQuestFlaggedCompleted(43142);
   completion_status["petrified_silkweave"] = petrified_silkweave_done;
   completion_status["berserking_helm_of_ondryel"] = berserking_helm_of_ondryel_done;
   completion_status["travelers_banking_chest"] = travelers_banking_chest_done;
@@ -62,112 +62,112 @@ end
 
 function WAT:printStats()
   local petrified_silkweave = completion_status["petrified_silkweave"]
-  if (petrified_silkweave == nil) then
-    petrified_silkweave = "Found"
+  if (petrified_silkweave == true) then
+    petrified_silkweave = "|cff2962FFFound|r"
   else
-    petrified_silkweave = "Not Found"
+    petrified_silkweave = "|cffD50000Not Found|r"
   end
   local berserking_helm_of_ondryel = completion_status["berserking_helm_of_ondryel"]
-  if (berserking_helm_of_ondryel == nil) then
-    berserking_helm_of_ondryel = "Found"
+  if (berserking_helm_of_ondryel == true) then
+    berserking_helm_of_ondryel = "|cff2962FFFound|r"
   else
-    berserking_helm_of_ondryel = "Not Found"
+    berserking_helm_of_ondryel = "|cffD50000Not Found|r"
   end
   local travelers_banking_chest = completion_status["travelers_banking_chest"]
-  if (travelers_banking_chest == nil) then
-    travelers_banking_chest = "Found"
+  if (travelers_banking_chest == true) then
+    travelers_banking_chest = "|cff2962FFFound|r"
   else
-    travelers_banking_chest = "Not Found"
+    travelers_banking_chest = "|cffD50000Not Found|r"
   end
   local soothing_leystone_shard = completion_status["soothing_leystone_shard"]
-  if (soothing_leystone_shard == nil) then
-    soothing_leystone_shard = "Found"
+  if (soothing_leystone_shard == true) then
+    soothing_leystone_shard = "|cff2962FFFound|r"
   else
-    soothing_leystone_shard = "Not Found"
+    soothing_leystone_shard = "|cffD50000Not Found|r"
   end
   local spellmask_of_azsylla = completion_status["spellmask_of_azsylla"]
-  if (spellmask_of_azsylla == nil) then
-    spellmask_of_azsylla = "Found"
+  if (spellmask_of_azsylla == true) then
+    spellmask_of_azsylla = "|cff2962FFFound|r"
   else
-    spellmask_of_azsylla = "Not Found"
+    spellmask_of_azsylla = "|cffD50000Not Found|r"
   end
   local ancient_mana_basin = completion_status["ancient_mana_basin"]
-  if (ancient_mana_basin == nil) then
-    ancient_mana_basin = "Found"
+  if (ancient_mana_basin == true) then
+    ancient_mana_basin = "|cff2962FFFound|r"
   else
-    ancient_mana_basin = "Not Found"
+    ancient_mana_basin = "|cffD50000Not Found|r"
   end
   local lenses_of_spellseer_dellian = completion_status["lenses_of_spellseer_dellian"]
-  if (lenses_of_spellseer_dellian == nil) then
-    lenses_of_spellseer_dellian = "Found"
+  if (lenses_of_spellseer_dellian == true) then
+    lenses_of_spellseer_dellian = "|cff2962FFFound|r"
   else
-    lenses_of_spellseer_dellian = "Not Found"
+    lenses_of_spellseer_dellian = "|cffD50000Not Found|r"
   end
   local lens_of_qindera = completion_status["lens_of_qindera"]
-  if (lens_of_qindera == nil) then
-    lens_of_qindera = "Found"
+  if (lens_of_qindera == true) then
+    lens_of_qindera = "|cff2962FFFound|r"
   else
-    lens_of_qindera = "Not Found"
+    lens_of_qindera = "|cffD50000Not Found|r"
   end
   local spellmask_of_azsylia = completion_status["spellmask_of_azsylia"]
-  if (spellmask_of_azsylia == nil) then
-    spellmask_of_azsylia = "Found"
+  if (spellmask_of_azsylia == true) then
+    spellmask_of_azsylia = "|cff2962FFFound|r"
   else
-    spellmask_of_azsylia = "Not Found"
+    spellmask_of_azsylia = "|cffD50000Not Found|r"
   end
   local disc_of_the_starcaller = completion_status["disc_of_the_starcaller"]
-  if (disc_of_the_starcaller == nil) then
-    disc_of_the_starcaller = "Found"
+  if (disc_of_the_starcaller == true) then
+    disc_of_the_starcaller = "|cff2962FFFound|r"
   else
-    disc_of_the_starcaller = "Not Found"
+    disc_of_the_starcaller = "|cffD50000Not Found|r"
   end
   local leyline_broodling = completion_status["leyline_broodling"]
-  if (leyline_broodling == nil) then
-    leyline_broodling = "Found"
+  if (leyline_broodling == true) then
+    leyline_broodling = "|cff2962FFFound|r"
   else
-    leyline_broodling = "Not Found"
+    leyline_broodling = "|cffD50000Not Found|r"
   end
   local berserking_helm_of_taenna = completion_status["berserking_helm_of_taenna"]
-  if (berserking_helm_of_taenna == nil) then
-    berserking_helm_of_taenna = "Found"
+  if (berserking_helm_of_taenna == true) then
+    berserking_helm_of_taenna = "|cff2962FFFound|r"
   else
-    berserking_helm_of_taenna = "Not Found"
+    berserking_helm_of_taenna = "|cffD50000Not Found|r"
   end
   local box_of_calming_whispers = completion_status["box_of_calming_whispers"]
-  if (box_of_calming_whispers == nil) then
-    box_of_calming_whispers = "Found"
+  if (box_of_calming_whispers == true) then
+    box_of_calming_whispers = "|cff2962FFFound|r"
   else
-    box_of_calming_whispers = "Not Found"
+    box_of_calming_whispers = "|cffD50000Not Found|r"
   end
   local treemenders_beacon = completion_status["treemenders_beacon"]
-  if (treemenders_beacon == nil) then
-    treemenders_beacon = "Found"
+  if (treemenders_beacon == true) then
+    treemenders_beacon = "|cff2962FFFound|r"
   else
-    treemenders_beacon = "Not Found"
+    treemenders_beacon = "|cffD50000Not Found|r"
   end
   local manafused_faldorei_egg_sac = completion_status["manafused_faldorei_egg_sac"]
-  if (manafused_faldorei_egg_sac == nil) then
-    manafused_faldorei_egg_sac = "Found"
+  if (manafused_faldorei_egg_sac == true) then
+    manafused_faldorei_egg_sac = "|cff2962FFFound|r"
   else
-    manafused_faldorei_egg_sac = "Not Found"
+    manafused_faldorei_egg_sac = "|cffD50000Not Found|r"
   end
   print("|cff2962FFWitheredAmryTrainingTracker v" .. WAT["version"] .. "|r")
   print("Your treasure completion is:")
-  print("Petrified Silkweave: |cff2962FF" .. petrified_silkweave .. "|r")
-  print("Berserking Helm of Ondry'el |cff2962FF" .. berserking_helm_of_ondryel .. "|r")
-  print("Traveler's Banking Chest |cff2962FF" .. travelers_banking_chest .. "|r")
-  print("Soothing Leystone Shard |cff2962FF" .. soothing_leystone_shard .. "|r")
-  print("Spellmask of Azsylla |cff2962FF" .. spellmask_of_azsylla .. "|r")
-  print("Ancient Mana Basin |cff2962FF" .. ancient_mana_basin .. "|r")
-  print("Lenses of Spellseer Dellian |cff2962FF" .. lenses_of_spellseer_dellian .. "|r")
-  print("Lens of Qin'dera |cff2962FF" .. lens_of_qindera .. "|r")
-  print("Spellmask of Azsylla |cff2962FF" .. spellmask_of_azsylia .. "|r")
-  print("Disc of the Starcaller |cff2962FF" .. disc_of_the_starcaller .. "|r")
-  print("Leyline Broodling |cff2962FF" .. leyline_broodling .. "|r")
-  print("Berserking Helm of Taenna |cff2962FF" .. berserking_helm_of_taenna .. "|r")
-  print("Box of Calming Whispers |cff2962FF" .. box_of_calming_whispers .. "|r")
-  print("Treemender's Beacon |cff2962FF" .. treemenders_beacon .. "|r")
-  print("Manafused Fal'dorei Egg Sac |cff2962FF" .. manafused_faldorei_egg_sac .. "|r")
+  print("Petrified Silkweave: " .. petrified_silkweave .. "|r")
+  print("Berserking Helm of Ondry'el " .. berserking_helm_of_ondryel .. "|r")
+  print("Traveler's Banking Chest " .. travelers_banking_chest .. "|r")
+  print("Soothing Leystone Shard " .. soothing_leystone_shard .. "|r")
+  print("Spellmask of Azsylla " .. spellmask_of_azsylla .. "|r")
+  print("Ancient Mana Basin " .. ancient_mana_basin .. "|r")
+  print("Lenses of Spellseer Dellian " .. lenses_of_spellseer_dellian .. "|r")
+  print("Lens of Qin'dera " .. lens_of_qindera .. "|r")
+  print("Spellmask of Azsylla " .. spellmask_of_azsylia .. "|r")
+  print("Disc of the Starcaller " .. disc_of_the_starcaller .. "|r")
+  print("Leyline Broodling " .. leyline_broodling .. "|r")
+  print("Berserking Helm of Taenna " .. berserking_helm_of_taenna .. "|r")
+  print("Box of Calming Whispers " .. box_of_calming_whispers .. "|r")
+  print("Treemender's Beacon " .. treemenders_beacon .. "|r")
+  print("Manafused Fal'dorei Egg Sac " .. manafused_faldorei_egg_sac .. "|r")
 end
 
 local frame = CreateFrame("FRAME", "WitheredArmyTrainigTresureTrackerFrame");
